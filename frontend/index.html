@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Model Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>AI Model Marketplace</h1>
+
+    <!-- 列出模型的表单 -->
+    <div>
+        <h2>List a New Model</h2>
+        <form id="listModelForm">
+            <input type="text" id="modelName" placeholder="Model Name" required>
+            <textarea id="modelDescription" placeholder="Model Description" required></textarea>
+            <input type="number" id="modelPrice" placeholder="Price in ETH" required>
+            <button type="submit">List Model</button>
+        </form>
+    </div>
+
+    <!-- 显示模型列表 -->
+    <div>
+        <h2>Available Models</h2>
+        <div id="modelsList"></div>
+    </div>
+
+    <!-- 评价模型的表单 -->
+    <div>
+        <h2>Rate a Model</h2>
+        <form id="rateModelForm">
+            <input type="number" id="modelIdToRate" placeholder="Model ID" required>
+            <input type="number" id="modelRating" placeholder="Rating (1-5)" required>
+            <button type="submit">Rate Model</button>
+        </form>
+    </div>
+
+    <!-- 购买模型的按钮 -->
+    <div>
+        <h2>Purchase a Model</h2>
+        <form id="purchaseModelForm">
+            <input type="number" id="modelIdToPurchase" placeholder="Model ID" required>
+            <button type="submit">Purchase</button>
+        </form>
+    </div>
+
+    <!-- 提现按钮 -->
+    <div>
+        <h2>Withdraw Funds</h2>
+        <button id="withdrawButton">Withdraw</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
